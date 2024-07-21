@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+/* Importing Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* General Body Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2e3a42;
+    /* Dark slate gray background */
+    color: #e0e0e0;
+    /* Light gray text */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* App Container */
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Header */
+.app-header {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #f0f0f0;
+    /* Off-white color */
+    margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #1c1e22;
+    /* Darker gray */
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+    max-width: 600px;
 }
 
-.App-link {
-  color: #61dafb;
+.search-input {
+    border: none;
+    background: none;
+    color: #e0e0e0;
+    font-size: 1rem;
+    flex: 1;
+    padding: 8px;
+    border-radius: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-input:focus {
+    outline: none;
+}
+
+.search-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Movie List */
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Movie Card */
+.movie-card {
+    background-color: #3a4a54;
+    /* Slate blue */
+    border-radius: 10px;
+    overflow: hidden;
+    width: 200px;
+    /* Increased width */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.movie-poster {
+    width: 100%;
+    height: auto;
+}
+
+.movie-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #f0f0f0;
+    margin: 5px 0;
+}
+
+.movie-year {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    margin-bottom: 10px;
+}
+
+/* Empty State */
+.empty {
+    color: #f0f0f0;
+    font-size: 1.2rem;
+    margin-top: 50px;
+}
+
+/* Footer */
+.app-footer {
+    margin-top: 30px;
+    color: #b0b0b0;
 }
