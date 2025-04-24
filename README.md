@@ -52,8 +52,12 @@ movizland/
 ├── public/
 │   └── index.html
 ├── src/
-│   ├── components/
 │   ├── App.js
+│   ├── App.css
+│   ├── MovieCard.jsx
+│   ├── SearchIcon.svg
+│   ├──reportWebVitals.js
+│   ├── setupTests.js
 │   └── index.js
 ├── package.json
 └── README.md
